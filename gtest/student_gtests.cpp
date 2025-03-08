@@ -84,3 +84,8 @@ TEST(Dijkstras, large_txt)
 
   EXPECT_EQ(out.str(), "0 \n0 1 \n0 1 2 \n0 3 \n0 1 4 \n0 3 5 \n0 3 5 6 \n"); 
 }
+
+TEST(Ladder, REPLACE)
+{
+
+}
