@@ -85,7 +85,29 @@ TEST(Dijkstras, large_txt)
   EXPECT_EQ(out.str(), "0 \n0 1 \n0 1 2 \n0 3 \n0 1 4 \n0 3 5 \n0 3 5 6 \n"); 
 }
 
-TEST(Ladder, REPLACE)
+TEST(Ladder, is_adjacent)
 {
+  string subsitution_1 = "cake";
+  string subsitution_2 = "bake";
+  EXPECT_TRUE(is_adjacent(subsitution_1, subsitution_2));
 
+  string insertion_1 = "game";
+  string insertion_2 = "gamer";
+  EXPECT_TRUE(is_adjacent(insertion_1, insertion_2));
+
+  string insertion_middle_1 = "chat";
+  string insertion_middle_2 = "cheat";
+  EXPECT_TRUE(is_adjacent(insertion_1, insertion_2));
+
+  string deletion_1 = "plight";
+  string deletion_2 = "light";
+  EXPECT_TRUE(is_adjacent(deletion_1, deletion_2));
+
+  string deletion_middle_1 = "avoid";
+  string deletion_middle_2 = "avid";
+  EXPECT_TRUE(is_adjacent(deletion_middle_1, deletion_middle_2));
+
+  string not_adj_1 = "marty";
+  string not_adj_2 = "parts";
+  EXPECT_FALSE(is_adjacent(not_adj_1, not_adj_2));
 }
