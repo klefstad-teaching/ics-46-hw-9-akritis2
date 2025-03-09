@@ -115,7 +115,11 @@ void print_word_ladder(const vector<string>& ladder)
     int ladder_len = ladder.size();
 
     if(ladder_len == 0)
+    {
         cout << "No word ladder found." << endl;
+        return;
+    }
+
 
     cout << "Word ladder found: ";
     
